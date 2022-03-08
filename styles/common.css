@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas#gronckle-output {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: tomato;
+}
+
+.warning {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    height: 50px;
+    z-index: 666;
+    color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: arial;
+}
