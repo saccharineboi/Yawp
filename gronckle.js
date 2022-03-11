@@ -1132,7 +1132,7 @@ const createCube = device => {
 ////////////////////////////////////////
 const checkWebGPUSupport = () => {
     if (!navigator.gpu) {
-        throw new Error("GronckleJS: WebGPU is not supported");
+        throw new Error("[GronckleJS] WebGPU is not supported");
     }
 };
 
@@ -1149,7 +1149,7 @@ const resizeCanvas = canvas => {
 const initCanvas = canvasId => {
     const canvas = document.getElementById(canvasId);
     if (!canvas) {
-        throw new Error(`canvas ${canvasId} not found`);
+        throw new Error(`[GronckleJS] canvas ${canvasId} not found`);
     }
     resizeCanvas(canvas);
     return canvas;
@@ -1159,7 +1159,7 @@ const initCanvas = canvasId => {
 const initAdapter = async () => {
     const adapter = await navigator.gpu.requestAdapter();
     if (!adapter) {
-        throw new Error("gpu.requestAdaptor() returned null");
+        throw new Error("[GronckleJS] gpu.requestAdaptor() returned null");
     }
     return adapter;
 };
@@ -1168,7 +1168,7 @@ const initAdapter = async () => {
 const initDevice = async adapter => {
     const device = await adapter.requestDevice();
     if (!device) {
-        throw new Error("adapter.requestDevice() returned null");
+        throw new Error("[GronckleJS] adapter.requestDevice() returned null");
     }
     return device;
 };
@@ -1177,7 +1177,7 @@ const initDevice = async adapter => {
 const initContext = canvas => {
     const ctx = canvas.getContext("webgpu");
     if (!ctx) {
-        throw new Error("getContext() returned null");
+        throw new Error("[GronckleJS] getContext() returned null");
     }
     return ctx;
 };
@@ -1244,7 +1244,7 @@ const createShader = async (device, renderPipelineDesc, shaderUrl, type, format)
             };
             break;
         default:
-            throw new Error("GronckleJS Error: Invalid shader type");
+            throw new Error("[GronckleJS] invalid shader type");
     }
 };
 

@@ -6,6 +6,6 @@ try {
 }
 catch (err) {
     const errorOutputDiv = document.getElementById("error-output");
-    errorOutputDiv.innerHTML = err.toString();
+    errorOutputDiv.innerHTML = `Error: ${err.toString()}`;
     errorOutputDiv.style.display = "block";
 }
