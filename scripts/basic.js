@@ -1,8 +1,8 @@
-import {GronckleJS} from "../gronckle.js";
+import {yawp} from "../yawp.js";
 
 ////////////////////////////////////////
 try {
-    const gronckle = await GronckleJS("gronckle-output");
+    const instance = await yawp("yawp-output");
 }
 catch (err) {
     const errorOutputDiv = document.getElementById("error-output");

@@ -1,2 +1,2 @@
-# GronckleJS
-GronckleJS is a single-file WebGPU Renderer
+# Yawp
+Yawp is a single-file WebGPU Renderer
